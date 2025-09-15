@@ -45,7 +45,7 @@ export default function ResumePage() {
 
             <li><strong>PT Clevara Inovasi Digital - Intern UI/UX Designer</strong> (Oct 2021-Jan 2022) 
               <p>
-                - Doing research on client's needs.
+                - Doing research on client&apos;s needs.
               </p>
               <p>
                 - Developed UI designs project by working directly with Project Manager and Personal Clients to coordinate and evaluate concept ideas of creative ; Wireframe, Mockups, Prototyping
