@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Variabel global */
 :root {
@@ -6,11 +8,6 @@
   --foreground: #F5F7FA;
   --muted: #A3A9B7;
   --accent: #4C8EFF;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,26 +25,84 @@ html, body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Custom utilities */
-.container {
-  @apply max-w-6xl mx-auto px-6;
-}
+/* Custom utilities menggunakan @layer untuk Tailwind v3 */
+@layer components {
+  .container {
+    @apply max-w-6xl mx-auto px-6;
+  }
 
-.section-title {
-  @apply text-2xl md:text-3xl font-semibold tracking-tight;
-}
+  .section-title {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight;
+  }
 
-.card {
-  @apply rounded-2xl bg-white/5 border border-white/10 shadow-soft;
-}
+  .card {
+    @apply rounded-2xl border backdrop-blur-sm;
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
 
-.btn {
-  @apply inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium transition;
-  background: linear-gradient(180deg, #ffffff19, #ffffff08);
-  border: 1px solid rgba(255,255,255,0.12);
-}
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium transition-all duration-200;
+    background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.03));
+    border: 1px solid rgba(255,255,255,0.12);
+  }
 
-.btn:hover {
-  background: linear-gradient(180deg, #ffffff22, #ffffff0f);
-  transform: translateY(-1px);
+  .btn:hover {
+    background: linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0.06));
+    transform: translateY(-1px);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #3b82f6);
+    border: 1px solid var(--accent);
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #3b82f6, var(--accent));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 142, 255, 0.3);
+  }
+
+  .hero-text {
+    @apply text-4xl md:text-6xl font-bold leading-tight;
+    background: linear-gradient(135deg, var(--foreground), var(--muted));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--accent), #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .nav-link {
+    @apply text-sm font-medium transition-colors duration-200;
+    color: var(--muted);
+  }
+
+  .nav-link:hover {
+    color: var(--foreground);
+  }
+
+  .project-card {
+    @apply rounded-2xl overflow-hidden transition-all duration-300;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+
+  .project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .text-muted {
+    color: var(--muted);
+  }
 }
