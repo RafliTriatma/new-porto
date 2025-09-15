@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* Variabel global */
+:root {
+  --background: #0B0B0C;
+  --foreground: #F5F7FA;
+  --muted: #A3A9B7;
+  --accent: #4C8EFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Base style */
+html, body {
+  @apply h-full scroll-smooth;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom utilities */
+.container {
+  @apply max-w-6xl mx-auto px-6;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-semibold tracking-tight;
+}
+
+.card {
+  @apply rounded-2xl bg-white/5 border border-white/10 shadow-soft;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-medium transition;
+  background: linear-gradient(180deg, #ffffff19, #ffffff08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.btn:hover {
+  background: linear-gradient(180deg, #ffffff22, #ffffff0f);
+  transform: translateY(-1px);
+}
