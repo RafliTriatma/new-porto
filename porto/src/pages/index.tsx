@@ -81,6 +81,26 @@ export default function HomePage() {
               title: "Wireframing",
               desc: "Designing skeletal frameworks for websites and apps.",
             },
+            {
+              title: "Design System",
+              desc: "Building scalable and consistent component libraries for products.",
+            },
+            {
+              title: "Prototyping",
+              desc: "Developing interactive prototypes to validate user flows.",
+            },
+            {
+              title: "Front-End Development",
+              desc: "Implementing responsive interfaces with Next.js, TypeScript, and Tailwind CSS.",
+            },
+            {
+              title: "Collaboration",
+              desc: "Working closely with developers and stakeholders to deliver user-centered solutions.",
+            },
+            {
+              title: "Responsive Design",
+              desc: "Ensuring seamless experience across desktop, tablet, and mobile devices.",
+            },
           ].map((item) => (
             <div key={item.title} className="card p-6">
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
