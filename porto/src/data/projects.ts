@@ -82,7 +82,7 @@ export const projects: Project[] = [
     tags: ["Website", "Company Profile", "Finance"],
     summary:
       "A website designed to introduce the company to clients and users, allowing them to access information about the company.",
-    cover: "/bannerwebklik.png",
+    cover: "/banner-klik.png",
     links: [{ label: "Case Study", href: "/projects/klikumkm-website" }],
     designProcess: [
         "As a UI/UX Designer, my role in this Website project was to design the website mockup based on the guidance provided by the Supervisor at PT. Pinjaman Kemakmuran Rakyat",
