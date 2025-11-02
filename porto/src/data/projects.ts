@@ -45,7 +45,7 @@ export const projects: Project[] = [
     title: "KlikUMKM Mobile App",
     role: "UI/UX Designer",
     period: "2024",
-    tags: ["Mobile App", "Finance", "Design System"],
+    tags: ["Mobile App", "Fintech", "Design System"],
     summary:
       "An application designed to provide loans for starting a business, as well as to allow users to become investors in other businesses.",
     cover: "/bannerklikapp.png",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     title: "KlikUMKM Dashboard",
     role: "UI/UX Designer",
     period: "2024",
-    tags: ["Dashboard", "Finance", "Analytics"],
+    tags: ["Dashboard", "Fintech", "Analytics"],
     summary:
       "Website dashboard for reporting and loan data management.",
     cover: "/bannerklikdash.png",
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     title: "KlikUMKM Company Website",
     role: "UI/UX Designer",
     period: "2024",
-    tags: ["Website", "Company Profile", "Finance"],
+    tags: ["Website", "Company Profile", "Fintech"],
     summary:
       "A website designed to introduce the company to clients and users, allowing them to access information about the company.",
     cover: "/bannerwebklik.png",
